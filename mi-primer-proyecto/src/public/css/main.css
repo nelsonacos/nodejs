@@ -1,0 +1,30 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #005c97; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #363795,
+    #005c97
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #363795,
+    #005c97
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar-brand {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+header img {
+  width: 60%;
+  padding: 42px 0;
+}
