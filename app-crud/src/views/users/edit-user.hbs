@@ -1,0 +1,33 @@
+<div class="col-md-4 mx-auto mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">
+        Edit User
+      </h4>
+    </div>
+    <div class="card-body">
+      <form action="/users/edit-user/{{user._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+          <input type="text" name="userName" class="form-control" placeholder="Write a userName" value="{{user.userName}}"
+            autofocus>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" placeholder="Write a email" value="{{user.email}}">
+        </div>
+        <div class="form-group">
+          <input type="text" name="firstName" class="form-control" placeholder="Write a firstName" value="{{user.firstName}}">
+        </div>
+        <div class="form-group">
+          <input type="text" name="lastName" class="form-control" placeholder="Write a lastName" value="{{user.lastName}}">
+        </div>
+        <div class="form-group">
+          <input type="text" name="age" class="form-control" placeholder="Add a age" value="{{user.age}}">
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary btn-block" value="Edit User">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

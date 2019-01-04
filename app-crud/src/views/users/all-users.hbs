@@ -1,0 +1,51 @@
+<style>
+  button a i{
+    color: white;
+  } 
+
+</style>
+
+<div class="row mt-4">
+  <a class="btn btn-primary" href="users/add">Add User</a> </div>
+<div class="row mt-2">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">userName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each allUsers}}
+      <tr>
+        <th>{{ userName}}</th>
+        <td> {{ email }}</td>
+        <td>{{ firstName }}</td>
+        <td>{{ age }} Years</td>
+        <td class="d-flex justify-content-around">
+          <form action="view/{{_id}}" method="POST">
+            <input type="hidden" name="_method">
+            <button type="submit" class="btn btn-primary">
+              <a href="users/view/{{_id}}">
+                <i class="fas fa-eye"></i>
+              </a>
+            </button>
+          </form>
+          <a href="users/edit/{{_id}}" class="btn btn-warning">
+            <i class="fas fa-edit"></i>
+          </a>
+          <form action="/users/delete/{{_id}}?_method=DELETE" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="btn btn-danger" type="submit">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
